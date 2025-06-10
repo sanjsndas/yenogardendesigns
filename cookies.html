@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cookies Policy - Yeno Garden Designs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg-light: #ffffff;
+    --text-primary: #97bc62;
+    --text-secondary: #000000;
+    --header-bg: #f9fafb;
+    --header-border: #e5e7eb;
+    --shadow-light: rgba(100, 116, 139, 0.1);
+    --border-radius: 0.75rem;
+    --transition-speed: 0.3s;
+    --dialog-bg: #f3f4f6;
+    --dialog-shadow: rgba(0, 0, 0, 0.15);
+  }
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+    font-size: 18px;
+    line-height: 1.7;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 0;
+    line-height: 1.15;
+  }
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 0.75em;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+  }
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8em;
+  }
+  p {
+    max-width: 900px;
+    margin-bottom: 1.5em;
+    color: var(--text-secondary);
+  }
+  a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+  }
+  a:hover, a:focus {
+    color: #111827;
+    outline: none;
+  }
+  ul, ol {
+    max-width: 900px;
+    margin-bottom: 1.5em;
+    padding-left: 1.6rem;
+    color: var(--text-secondary);
+  }
+  li {
+    margin-bottom: 0.6em;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+    z-index: 1000;
+  }
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.4rem;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: var(--text-primary);
+    color: var(--bg-light);
+    outline: none;
+  }
+  /* Hero Section */
+  .hero {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #97bc62 15%, #2c5f2d 90%);
+    color: #f0faf0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    margin-bottom: 4rem;
+  }
+  .hero h1 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.07em;
+    text-shadow: 1px 3px 8px rgba(0,0,0,.3);
+  }
+  .hero p {
+    max-width: 720px;
+    margin: 1.8rem auto 0 auto;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  }
+
+  /* Content Sections */
+  section {
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 16px var(--shadow-light);
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #2c5f2d;
+    color: #d1e7c1;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+  }
+  footer p {
+    margin: 0.3rem auto;
+    max-width: 600px;
+  }
+  footer a {
+    color: #a6c48a;
+    text-decoration: underline;
+  }
+  footer a:hover,
+  footer a:focus {
+    color: #d1e7c1;
+    outline: none;
+  }
+
+  /* Cookie Consent Dialog */
+  #cookie-consent {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dialog-bg);
+    box-shadow: 0 4px 10px var(--dialog-shadow);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.8rem;
+    max-width: 940px;
+    width: 90%;
+    font-size: 1rem;
+    color: var(--text-primary);
+    z-index: 1100;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    user-select: text;
+  }
+  #cookie-consent p {
+    flex: 1 1 60%;
+    margin: 0;
+  }
+  #cookie-consent button {
+    background-color: var(--text-primary);
+    color: var(--bg-light);
+    border: none;
+    border-radius: 9999px;
+    padding: 0.55rem 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    user-select: none;
+  }
+  #cookie-consent button:hover,
+  #cookie-consent button:focus {
+    background-color: #4b7039;
+    outline: none;
+  }
+  #cookie-consent button.decline {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+  }
+  #cookie-consent button.decline:hover,
+  #cookie-consent button.decline:focus {
+    background-color: #f3f4f6;
+  }
+  /* Responsive */
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2.7rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    section {
+      padding: 1.5rem 1rem;
+    }
+    #cookie-consent {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    #cookie-consent p {
+      flex: 1 1 100%;
+    }
+    #cookie-consent button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <nav aria-label="Primary navigation">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="logo" tabindex="0">Yeno Garden Designs</div>
+      <div class="nav-links">
+        <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy </a>
+        <a href="terms.html" tabindex="0">Terms of Service</a>
+        <a href="cookies.html" tabindex="0" aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" role="region" aria-labelledby="hero-title">
+    <h1 id="hero-title">Cookies Policy for Yeno Garden Designs</h1>
+    <p>This comprehensive Cookies Policy explains how Yeno Garden Designs uses cookies and similar technologies on our website to enhance your experience, analyze use, and comply with legal requirements.</p>
+  </section>
+
+  <section role="region" aria-labelledby="cookies-intro" class="container">
+    <h2 id="cookies-intro" class="section-title">Introduction to Cookies</h2>
+    <p>Cookies are small text files that websites place on your device (computer, tablet, smartphone) when you visit them. Cookies are widely used to make websites work more efficiently and provide information to the site owners.</p>
+    <p>Understanding cookies, how we use them, and your rights helps you make informed decisions when browsing our website and using our services.</p>
+    <p>This policy covers the types of cookies we use, their purposes, how to control them, and related privacy implications in detail.</p>
+    <p>We encourage you to read this policy carefully and reach out with any questions using our contact info found at the bottom of this page.</p>
+  </section>
+
+  <section role="region" aria-labelledby="types-of-cookies" class="container">
+    <h2 id="types-of-cookies" class="section-title">Types of Cookies We Use</h2>
+    <p>We use several categories of cookies on our website, each serving different functions. These include:</p>
+    <h3>1. Essential Cookies</h3>
+    <p>Essential cookies are strictly necessary to enable basic functions like page navigation, secure access to parts of our site, and facilitating your interaction with our services. Without these cookies, the website may not perform optimally.</p>
+    <h3>2. Performance and Analytics Cookies</h3>
+    <p>These cookies collect anonymous information about how visitors use our website, which pages are most popular, and performance issues. This information helps us improve our website’s usability and functionality.</p>
+    <h3>3. Functional Cookies</h3>
+    <p>Functional cookies allow the website to remember choices you make such as your preferred language, font size, or location to provide a more personalized experience.</p>
+    <h3>4. Targeting or Advertising Cookies</h3>
+    <p>While we do not directly use these, third parties may place cookies to deliver relevant ads based on your browsing activity across other websites. These cookies track your browsing habits and may share information with advertisers.</p>
+    <h3>5. Social Media Cookies</h3>
+    <p>Our website contains social media features that may place cookies to enable you to share content or interact with social platforms.</p>
+  </section>
+
+  <section role="region" aria-labelledby="how-we-use-cookies" class="container">
+    <h2 id="how-we-use-cookies" class="section-title">How We Use Cookies and Tracking Technologies</h2>
+    <p>We use cookies to:</p>
+    <ul>
+      <li>Ensure the website functions securely and efficiently.</li>
+      <li>Remember your preferences and settings for future visits.</li>
+      <li>Analyze user behavior and traffic to improve content and layout.</li>
+      <li>Measure the effectiveness of marketing campaigns.</li>
+      <li>Deliver tailored advertisements by third-party partners, if you opt-in.</li>
+    </ul>
+    <p>Our cookie usage helps provide a smooth browsing experience and supports our business goals in a transparent way.</p>
+  </section>
+
+  <section role="region" aria-labelledby="managing-cookies" class="container">
+    <h2 id="managing-cookies" class="section-title">Managing and Controlling Cookies</h2>
+    <p>You have the choice to accept or reject cookies. Many browsers allow you to control cookie preferences through settings:</p>
+    <ul>
+      <li>You can block or delete cookies using your browser settings, extensions, or privacy modes.</li>
+      <li>Most browsers accept cookies by default but offer features to clear or limit cookie usage.</li>
+      <li>Disabling cookies may impact website functionality, user experience, and some services.</li>
+    </ul>
+    <p>We provide a cookie consent dialog on our website to give you control over which categories of cookies you authorize. You can update your preferences anytime by revisiting the cookie dialog or using browser controls.</p>
+  </section>
+
+  <section role="region" aria-labelledby="third-party-cookies" class="container">
+    <h2 id="third-party-cookies" class="section-title">Third-Party Cookies</h2>
+    <p>Third-party service providers such as analytics companies, advertising networks, and social media platforms may deploy cookies on our website.</p>
+    <p>The placement, use, and management of such cookies fall under their respective privacy policies and practices.</p>
+    <p>We recommend reviewing the privacy policies of these third parties to understand their cookie usage and options.</p>
+  </section>
+
+  <section role="region" aria-labelledby="legal-framework" class="container">
+    <h2 id="legal-framework" class="section-title">Legal Framework and Compliance</h2>
+    <p>We comply with data protection laws including GDPR (General Data Protection Regulation) and CCPA (California Consumer Privacy Act) with respect to cookies.</p>
+    <p>This means:</p>
+    <ul>
+      <li>You must be informed about cookies used and their purposes.</li>
+      <li>You have the right to consent or object to cookie usage.</li>
+      <li>We maintain records of your consent and allow you to withdraw it.</li>
+      <li>We only place non-essential cookies with your explicit consent.</li>
+    </ul>
+  </section>
+
+  <section role="region" aria-labelledby="cookies-impact" class="container">
+    <h2 id="cookies-impact" class="section-title">Impact of Cookies on Your Privacy</h2>
+    <p>Cookies can collect identifiers and browsing behavior, which can be personal data under privacy laws.</p>
+    <p>We take your privacy seriously and ensure:</p>
+    <ul>
+      <li>Your data collected via cookies is handled securely.</li>
+      <li>We do not sell your personal data obtained from cookies.</li>
+      <li>You have full control to accept or reject cookies through clear choices.</li>
+    </ul>
+    <p>Understanding cookie functions helps you better control your online privacy and experience.</p>
+  </section>
+
+  <section role="region" aria-labelledby="opt-out" class="container">
+    <h2 id="opt-out" class="section-title">Opting Out and Cookie Preferences</h2>
+    <p>You can opt out of certain cookie categories by:</p>
+    <ul>
+      <li>Declining cookies in the consent dialog on our website.</li>
+      <li>Using browser settings to disable third-party cookies or all cookies.</li>
+      <li>Installing browser extensions that block trackers and cookies.</li>
+      <li>Opting out of targeted advertising via industry opt-out platforms.</li>
+    </ul>
+    <p>Please note that opting out of some cookies may impair some website functions and services we provide.</p>
+  </section>
+
+  <section role="region" aria-labelledby="data-retention" class="container">
+    <h2 id="data-retention" class="section-title">Data Retention Related to Cookies</h2>
+    <p>Cookies and tracking technologies may store data for varied durations:</p>
+    <ul>
+      <li>Session cookies last only during your visit and are deleted when you close your browser.</li>
+      <li>Persistent cookies remain on your device for specified periods to remember preferences or track usage over time.</li>
+    </ul>
+    <p>We do not retain personal data beyond what is necessary for the purposes described or required by law.</p>
+  </section>
+
+  <section role="region" aria-labelledby="cookies-and-minors" class="container">
+    <h2 id="cookies-and-minors" class="section-title">Cookies and Minors</h2>
+    <p>Our website is not intended for children under 16 years old.</p>
+    <p>We do not knowingly collect data from minors or use cookies targeted specifically at children.</p>
+  </section>
+
+  <section role="region" aria-labelledby="updates-policy" class="container">
+    <h2 id="updates-policy" class="section-title">Updates to This Cookies Policy</h2>
+    <p>We may update this Cookies Policy occasionally to reflect changes in regulations, technology, or our practices.</p>
+    <p>We encourage you to check this page regularly for the latest information.</p>
+  </section>
+
+  <section role="region" aria-labelledby="contact-details" class="container" style="margin-bottom: 5rem;">
+    <h2 id="contact-details" class="section-title">Contact Information</h2>
+    <p>If you have questions or concerns regarding our Cookies Policy or wishes related to cookie preferences, please contact us:</p>
+    <address style="font-style: normal; max-width: 900px; color: var(--text-primary); line-height: 1.6;">
+      Yeno Garden Designs<br />
+      40 E 7th St, New York, NY 10003, USA<br />
+      Phone: <a href="tel:+18003436667">(800) 343-6667</a><br />
+      Email: <a href="mailto:info@yenogardendesigns.com">info@yenogardendesigns.com</a>
+    </address>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <p>Yeno Garden Designs &copy; 2024 &mdash; 40 E 7th St, New York, NY 10003, USA | Phone: (800) 343-6667</p>
+</footer>
+
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-modal="true" aria-label="Cookie consent banner">
+  <p>We use cookies to optimize your browsing experience, analyze site traffic, and personalize content. You can accept or decline non-essential cookies.</p>
+  <div>
+    <button id="accept-cookies" aria-label="Accept cookies">Accept</button>
+    <button id="decline-cookies" class="decline" aria-label="Decline cookies">Decline</button>
+  </div>
+</div>
+
+<script>
+  (function(){
+    const cookieConsent = document.getElementById('cookie-consent');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+    const COOKIE_NAME = 'yeno_cookie_consent';
+
+    function setCookie(name,value,days){
+      var expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "")  + expires + "; path=/; SameSite=Lax";
+    }
+
+    function getCookie(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for(let i=0;i < ca.length;i++) {
+          let c = ca[i];
+          while (c.charAt(0)==' ') c = c.substring(1,c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+      }
+      return null;
+    }
+
+    function hideConsent(){
+      cookieConsent.style.display = 'none';
+    }
+
+    // Check if user already made a choice
+    const consent = getCookie(COOKIE_NAME);
+    if(consent === 'accepted' || consent === 'declined'){
+      hideConsent();
+    }
+
+    acceptBtn.addEventListener('click', function(){
+      setCookie(COOKIE_NAME,'accepted',365);
+      hideConsent();
+      // Here you could initialize analytics or other cookies as desired
+    });
+
+    declineBtn.addEventListener('click', function(){
+      setCookie(COOKIE_NAME,'declined',365);
+      hideConsent();
+      // Here you may disable analytics or tracking scripts
+    });
+  })();
+</script>
+</body>
+</html>

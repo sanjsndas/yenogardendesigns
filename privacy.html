@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy - Yeno Garden Designs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg-light: #ffffff;
+    --text-primary: #97bc62;
+    --text-secondary: #000000;
+    --header-bg: #f9fafb;
+    --header-border: #e5e7eb;
+    --shadow-light: rgba(100, 116, 139, 0.1);
+    --border-radius: 0.75rem;
+    --transition-speed: 0.3s;
+  }
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+    font-size: 17px;
+    line-height: 1.65;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 0;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5em;
+  }
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1em;
+  }
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8em;
+  }
+  p {
+    max-width: 900px;
+    margin-bottom: 1.25em;
+    color: var(--text-secondary);
+  }
+  a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+  }
+  a:hover, a:focus {
+    color: #111827;
+    outline: none;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+    z-index: 1000;
+  }
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding: 0.35rem 0.4rem;
+    border-radius: 0.4rem;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: var(--text-primary);
+    color: var(--bg-light);
+    outline: none;
+  }
+  /* Hero Section */
+  .hero {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #97bc62 10%, #2c5f2d 90%);
+    color: #f0faf0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    margin-bottom: 4rem;
+  }
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.07em;
+    text-shadow: 1px 3px 8px rgba(0,0,0,.3);
+  }
+  .hero p {
+    max-width: 720px;
+    margin: 1.5rem auto 0 auto;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  }
+  /* Content Sections */
+  section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 3rem;
+    color: var(--text-secondary);
+  }
+  /* Section Titles with spacing */
+  .section-title {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  /* Subsections */
+  h3 {
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  /* Paragraph inside sections */
+  section p {
+    font-size: 1rem;
+    max-width: 850px;
+  }
+  /* Lists */
+  ul, ol {
+    max-width: 850px;
+    color: var(--text-secondary);
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  li {
+    margin-bottom: 0.53rem;
+  }
+  /* Footer */
+  footer {
+    background-color: #2c5f2d;
+    color: #000000;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+  }
+  footer p {
+    margin: 0.25rem auto;
+    max-width: 600px;
+  }
+  footer a {
+    color: #a6c48a;
+    text-decoration: underline;
+  }
+  footer a:hover,
+  footer a:focus {
+    color: #d1e7c1;
+    outline: none;
+  }
+  /* Responsive */
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2.7rem;
+      padding: 0 1rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+    section {
+      padding: 0 0.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <nav aria-label="Primary navigation">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="logo" tabindex="0">Yeno Garden Designs</div>
+      <div class="nav-links">
+        <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0" aria-current="page" >Privacy</a>
+        <a href="terms.html" tabindex="0">Terms of Service</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" role="region" aria-labelledby="hero-title">
+    <h1 id="hero-title">Privacy Policy for Yeno Garden Designs</h1>
+    <p>Your privacy and trust are paramount. This policy explains how we collect, use, and safeguard your information on our website and services.</p>
+  </section>
+
+  <section role="region" aria-labelledby="introduction-title" class="container">
+    <h2 id="introduction-title" class="section-title">Introduction</h2>
+    <p>Yeno Garden Designs ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and protect your information when you visit our website <a href="index.html">yenogardendesigns.com</a> or engage with our garden design services.</p>
+    <p>This policy applies to all visitors, users, and others who access or use our website and services ("you," "your"). By using our website or services, you consent to the practices described in this Privacy Policy.</p>
+  </section>
+
+  <section role="region" aria-labelledby="information-collection-title" class="container">
+    <h2 id="information-collection-title" class="section-title">Information We Collect</h2>
+    <p>We collect certain personal and non-personal information to provide and improve our services, respond to inquiries, and comply with legal requirements. Types of information collected include:</p>
+    <h3>Personal Information</h3>
+    <p>Personal information can identify you and may include:</p>
+    <ul>
+      <li>Name, email address, phone number, and mailing address.</li>
+      <li>Information you provide when requesting a quote, consultation, or service.</li>
+      <li>Payment information needed to process transactions (handled securely through third-party payment processors).</li>
+    </ul>
+    <h3>Non-Personal Information</h3>
+    <p>This includes:</p>
+    <ul>
+      <li>Browser type and version.</li>
+      <li>Operating system and platform.</li>
+      <li>IP address and device information.</li>
+      <li>Pages visited, time spent on pages, and navigation paths.</li>
+      <li>Cookies and tracking technologies as described below.</li>
+    </ul>
+  </section>
+
+  <section role="region" aria-labelledby="how-information-used-title" class="container">
+    <h2 id="how-information-used-title" class="section-title">How We Use Your Information</h2>
+    <p>We use the collected information to:</p>
+    <ul>
+      <li>Provide, maintain, and improve our garden design services and website functionality.</li>
+      <li>Respond to your inquiries, requests, and customer support needs.</li>
+      <li>Process payments securely and send receipts or confirmations.</li>
+      <li>Send promotional materials and updates about our offerings, if you opt-in.</li>
+      <li>Analyze site usage to improve user experience and content.</li>
+      <li>Comply with legal obligations and protect our rights.</li>
+    </ul>
+    <p>We will not sell, rent, or trade your personal information to third parties for their marketing purposes.</p>
+  </section>
+
+  <section role="region" aria-labelledby="cookies-title" class="container">
+    <h2 id="cookies-title" class="section-title">Cookies and Tracking Technologies</h2>
+    <p>Our website uses cookies and similar tracking technologies to enhance your browsing experience, analyze traffic, and remember preferences. Cookies are small data files stored on your device.</p>
+    <h3>Types of Cookies We Use</h3>
+    <ul>
+      <li><strong>Essential Cookies:</strong> Required for website operation and secure access.</li>
+      <li><strong>Performance Cookies:</strong> Collect anonymous information about site usage and performance.</li>
+      <li><strong>Functional Cookies:</strong> Remember your preferences and choices (e.g., language, font size).</li>
+      <li><strong>Advertising Cookies:</strong> Used by third-party services to deliver relevant ads (we do not use these directly).</li>
+    </ul>
+    <h3>Managing Cookies</h3>
+    <p>You can modify your browser settings to block or delete cookies. However, disabling cookies may affect website functionality and user experience.</p>
+  </section>
+
+  <section role="region" aria-labelledby="information-sharing-title" class="container">
+    <h2 id="information-sharing-title" class="section-title">Information Sharing and Disclosure</h2>
+    <p>We do not sell your personal information. We may share your information only in the following limited circumstances:</p>
+    <ul>
+      <li><strong>Service Providers:</strong> Trusted third-party vendors who assist in operating our website and business (e.g., payment processors, hosting providers). These parties are bound by confidentiality agreements.</li>
+      <li><strong>Legal Requirements:</strong> When required by law, regulation, legal process, or government request.</li>
+      <li><strong>Business Transfers:</strong> If we engage in a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction with continued privacy protection.</li>
+      <li><strong>Protection:</strong> To protect our rights, safety, or property, or that of our users or others.</li>
+    </ul>
+  </section>
+
+  <section role="region" aria-labelledby="your-choices-title" class="container">
+    <h2 id="your-choices-title" class="section-title">Your Choices and Rights</h2>
+    <p>You have important choices regarding how your information is collected and used:</p>
+    <h3>Access and Correction</h3>
+    <p>You may request access to your personal data we hold and ask for corrections if inaccurate or incomplete.</p>
+    <h3>Marketing Communications</h3>
+    <p>You can opt out of receiving marketing emails at any time by using the unsubscribe link included in messages or contacting us directly.</p>
+    <h3>Cookies</h3>
+    <p>As mentioned, you can control cookie settings in your browser preferences.</p>
+    <h3>Data Deletion</h3>
+    <p>Upon request, we will delete your personal data unless we are required to retain it for legal or business purposes.</p>
+  </section>
+
+  <section role="region" aria-labelledby="security-title" class="container">
+    <h2 id="security-title" class="section-title">Data Security</h2>
+    <p>We take reasonable measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. This includes physical, electronic, and procedural safeguards.</p>
+    <p>However, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security, but we strive to protect your information.</p>
+  </section>
+
+  <section role="region" aria-labelledby="third-party-links-title" class="container">
+    <h2 id="third-party-links-title" class="section-title">Third-Party Websites and Services</h2>
+    <p>Our website may contain links to third-party websites, services, or apps that are not operated or controlled by us. We are not responsible for their privacy practices.</p>
+    <p>We encourage you to review the privacy policies of any third parties you interact with through links on our site.</p>
+  </section>
+
+  <section role="region" aria-labelledby="children-privacy-title" class="container">
+    <h2 id="children-privacy-title" class="section-title">Children’s Privacy</h2>
+    <p>Our website and services are not directed to, nor intended for, children under the age of 16. We do not knowingly collect personal information from children under 16.</p>
+    <p>If you believe we have collected such data, please contact us immediately for prompt deletion.</p>
+  </section>
+
+  <section role="region" aria-labelledby="international-transfers-title" class="container">
+    <h2 id="international-transfers-title" class="section-title">International Data Transfers</h2>
+    <p>Your information may be stored and processed in the United States or other countries where we or our service providers maintain facilities.</p>
+    <p>By using our services, you consent to the transfer of information to countries which may have different data protection laws than your jurisdiction.</p>
+  </section>
+
+  <section role="region" aria-labelledby="policy-changes-title" class="container">
+    <h2 id="policy-changes-title" class="section-title">Changes to this Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements.</p>
+    <p>We encourage you to review this page periodically for any updates. Continued use of our website after changes indicates your acceptance of the revised terms.</p>
+  </section>
+
+  <section role="region" aria-labelledby="contact-info-title" class="container" style="margin-bottom: 5rem;">
+    <h2 id="contact-info-title" class="section-title">Contact Information</h2>
+    <p>If you have questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+    <address style="font-style: normal; max-width: 850px; color: var(--text-primary); line-height: 1.55;">
+      Yeno Garden Designs<br />
+      40 E 7th St, New York, NY 10003, USA<br />
+      Phone: <a href="tel:+18003436667">(800) 343-6667</a><br />
+      Email: <a href="mailto:privacy@yenogardendesigns.com">privacy@yenogardendesigns.com</a>
+    </address>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <p>Yeno Garden Designs &copy; 2024 &mdash; 40 E 7th St, New York, NY 10003, USA | Phone: (800) 343-6667</p>
+</footer>
+</body>
+</html>
+

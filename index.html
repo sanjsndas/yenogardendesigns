@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yeno Garden Designs - Expert Garden Design Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --forest-dark-green: #2c5f2d;
+      --forest-light-green: #97bc62;
+      --forest-brown: #5a3e1b;
+      --forest-background: #f7faf5;
+      --text-primary: #1a1a1a;
+      --text-secondary: #000000;
+      --card-bg: #ffffff;
+      --shadow-light: rgba(44, 95, 45, 0.1);
+      --border-radius: 12px;
+      --transition-speed: 0.3s;
+    }
+
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: var(--forest-background);
+      color: var(--text-secondary);
+      line-height: 1.65;
+      font-size: 17px;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3, h4 {
+      color: var(--forest-dark-green);
+      font-family: 'Poppins', sans-serif;
+      margin-top: 0;
+      line-height: 1.2;
+    }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 0.6em;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+    }
+    p {
+      max-width: 720px;
+      margin-bottom: 1.4em;
+      color: var(--text-secondary);
+    }
+    a {
+      color: var(--forest-dark-green);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color var(--transition-speed);
+    }
+    a:hover, a:focus {
+      color: var(--forest-light-green);
+      outline: none;
+    }
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #ffffffcc;
+      backdrop-filter: saturate(180%) blur(10px);
+      box-shadow: 0 2px 8px var(--shadow-light);
+      z-index: 1000;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .logo {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      color: var(--forest-dark-green);
+      letter-spacing: 0.08em;
+      user-select: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      font-weight: 600;
+    }
+    .nav-links a {
+      font-size: 1rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 6px;
+      transition: background-color var(--transition-speed), color var(--transition-speed);
+    }
+    .nav-links a:hover,
+    .nav-links a:focus {
+      background-color: var(--forest-light-green);
+      color: #ffffff;
+      outline: none;
+    }
+
+    /* Hero */
+    section.hero {
+      background: linear-gradient(135deg, #2c5f2dee 0%, #97bc6288 100%);
+      color: #f0faf0;
+      padding: 6rem 1.25rem 6rem;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+      margin-bottom: 4rem;
+    }
+    section.hero h1 {
+      font-size: 4rem;
+      max-width: 900px;
+      margin: 0 auto 0.5rem auto;
+      letter-spacing: 0.07em;
+      text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.3);
+    }
+    section.hero p {
+      max-width: 680px;
+      margin: 0 auto 2rem auto;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    }
+    .btn-primary {
+      background-color: var(--forest-brown);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      transition: background-color var(--transition-speed);
+      box-shadow: 0 5px 10px rgba(90, 62, 27, 0.35);
+      user-select: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #4b2e0c;
+      outline: none;
+      box-shadow: 0 7px 15px rgba(75, 46, 12, 0.6);
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    section.about {
+      padding-bottom: 4rem;
+      padding-top: 1rem;
+      text-align: center;
+    }
+    section.about h2 {
+      margin-bottom: 1rem;
+    }
+    section.about p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #3a3a3a;
+    }
+
+    /* Services Section */
+    section.services {
+      background-color: #fff;
+      padding: 2rem 1.25rem 6rem;
+    }
+    section.services h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--forest-dark-green);
+    }
+    .services-grid {
+      display: grid;
+      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: 0 3px 14px var(--shadow-light);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition-speed);
+      cursor: default;
+    }
+    .service-card:hover,
+    .service-card:focus-within {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 24px rgba(44, 95, 45, 0.22);
+      outline: none;
+    }
+    .service-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      user-select: none;
+    }
+    .service-content {
+      padding: 1rem 1.5rem 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      color: var(--text-primary);
+    }
+    .service-content h3 {
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--forest-dark-green);
+      user-select: text;
+    }
+    .service-content p {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      user-select: text;
+    }
+
+    /* Pricing Section */
+    section.pricing {
+      padding: 2rem 1.25rem 5rem;
+      background: linear-gradient(90deg, #97bc62aa 0%, #2c5f2ddd 100%);
+      color: #fff;
+      text-align: center;
+    }
+    section.pricing h2 {
+      margin-bottom: 2rem;
+      color: #fff;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .pricing-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .pricing-card {
+      background-color: var(--forest-dark-green);
+      border-radius: var(--border-radius);
+      box-shadow: 0 7px 20px rgba(44, 95, 45, 0.7);
+      padding: 1.75rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background-color var(--transition-speed);
+      cursor: default;
+    }
+    .pricing-card:hover,
+    .pricing-card:focus-within {
+      background-color: #3a7039;
+      outline: none;
+      transform: scale(1.04);
+    }
+    .pricing-title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .pricing-price {
+      font-weight: 700;
+      font-size: 2.25rem;
+      margin: 0.5rem 0 1.2rem;
+      letter-spacing: 0.05em;
+      font-family: 'Poppins', sans-serif;
+    }
+    .pricing-description {
+      font-size: 1rem;
+      color: #d1e7c1dd;
+      margin-bottom: 1rem;
+    }
+
+    /* Customer Satisfaction Section */
+    section.customer-satisfaction {
+      padding: 3rem 1.25rem 4rem;
+      background-color: var(--card-bg);
+      color: var(--forest-dark-green);
+      text-align: center;
+      max-width: 1120px;
+      margin: 0 auto 4rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 13px var(--shadow-light);
+    }
+    section.customer-satisfaction h2 {
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    .testimonials {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      margin-top: 1.5rem;
+    }
+    .testimonial-card {
+      background: var(--forest-light-green);
+      padding: 1.5rem 1.7rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 3px 10px rgba(44, 95, 45, 0.25);
+      color: #1b2b10;
+      font-style: italic;
+      position: relative;
+      user-select: text;
+      transition: transform var(--transition-speed);
+    }
+    .testimonial-card:hover,
+    .testimonial-card:focus-within {
+      transform: scale(1.04);
+      outline: none;
+    }
+    .testimonial-author {
+      margin-top: 1rem;
+      font-weight: 700;
+      text-align: right;
+      font-style: normal;
+    }
+
+    /* Disclaimer Section */
+    section.disclaimer {
+      padding: 2.5rem 1.25rem;
+      font-size: 0.9rem;
+      max-width: 850px;
+      margin: 0 auto 4rem;
+      color: #666;
+      font-style: italic;
+      text-align: center;
+      border-top: 1px solid #ddd;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--forest-dark-green);
+      color: #080807;
+      padding: 2rem 1.25rem;
+      text-align: center;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      user-select: none;
+    }
+    footer p {
+      margin: 0.25rem auto;
+      max-width: 600px;
+    }
+    footer a {
+      color: #000000;
+      text-decoration: underline;
+    }
+    footer a:hover,
+    footer a:focus {
+      color: #d1e7c1;
+      outline: none;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.8rem;
+      }
+      section.hero p {
+        font-size: 1rem;
+      }
+      .btn-primary {
+        padding: 0.9rem 2.5rem;
+        font-size: 1.1rem;
+      }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      .testimonial-card {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <nav class="container" aria-label="Primary navigation">
+      <div class="logo" tabindex="0">Yeno Garden Designs</div>
+      <div class="nav-links">
+       <a href="index.html" tabindex="0" aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms of Service</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" role="region" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Transform Your Outdoors with Yeno Garden Designs</h1>
+        <p>Creating breathtaking, sustainable garden spaces inspired by the forest's natural beauty and tailored perfectly for you.</p>
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Your Free Consultation</button>
+      </div>
+    </section>
+
+    <section class="about container" id="about" role="region" aria-labelledby="about-title">
+      <h2 id="about-title">About Yeno Garden Designs</h2>
+      <p>At Yeno Garden Designs, we specialize in creating custom garden landscapes that blend elegance with nature’s tranquility. Our team of expert garden designers brings years of experience crafting outdoor spaces that embody the spirit of the forest — lush greenery, natural textures, and serene atmospheres.</p>
+      <p>Whether you envision a woodland retreat, a stylish terrace garden, or a vibrant flower haven, we focus on sustainable, eco-friendly practices combined with expert horticultural knowledge. Each design is tailored to the unique layout, soil, and microclimate of your property, ensuring long-lasting beauty and enjoyment.</p>
+      <p>Our passion is bringing outdoor dreams to life, crafting serene sanctuaries where every tree, shrub, and blossom tells a story.</p>
+    </section>
+
+    <section class="services" id="services" role="region" aria-labelledby="services-title">
+      <h2 id="services-title">Our Garden Design Services</h2>
+      <div class="services-grid">
+
+        <article class="service-card" tabindex="0" aria-labelledby="service1-title">
+          <img src="s1.jpg" alt="Woodland garden pathway with lush trees" loading="lazy" />
+          <div class="service-content">
+            <h3 id="service1-title">Woodland Garden Design</h3>
+            <p>Inspired by the beauty of natural forests, we create woodland-inspired gardens with native trees, ferns, and wildflowers to give your space a peaceful, shaded retreat feel amidst urban settings.</p>
+          </div>
+        </article>
+
+        <article class="service-card" tabindex="0" aria-labelledby="service2-title">
+          <img src="s2.jpg" alt="Garden terrace with modern seating and greenery" loading="lazy" />
+          <div class="service-content">
+            <h3 id="service2-title">Terrace and Patio Garden</h3>
+            <p>Designing elegant terraces with integrated planters, seating areas, and greenery to create perfect outdoor living spaces that blend comfort with natural elements.</p>
+          </div>
+        </article>
+
+        <article class="service-card" tabindex="0" aria-labelledby="service3-title">
+          <img src="s3.jpg" alt="Vibrant flower garden with diverse blossoms" loading="lazy" />
+          <div class="service-content">
+            <h3 id="service3-title">Flower Garden & Seasonal Planting</h3>
+            <p>Expert planning and planting of flower beds, combining seasonal blooms and perennial plants to guarantee year-round color, fragrance, and charm.</p>
+          </div>
+        </article>
+
+        <article class="service-card" tabindex="0" aria-labelledby="service4-title">
+          <img src="s4.jpg" alt="Eco-friendly garden with natural materials and recycled elements" loading="lazy" />
+          <div class="service-content">
+            <h3 id="service4-title">Sustainable & Eco Garden Planning</h3>
+            <p>Implementing eco-conscious design approaches including rainwater harvesting, native plants, composting solutions, and wildlife habitats.</p>
+          </div>
+        </article>
+
+        <article class="service-card" tabindex="0" aria-labelledby="service5-title">
+          <img src="s5.jpg" alt="Custom garden lighting with warm forest ambiance" loading="lazy" />
+          <div class="service-content">
+            <h3 id="service5-title">Custom Garden Lighting</h3>
+            <p>Designing subtle outdoor lighting schemes to highlight your garden’s best features and create inviting ambiance during dusk and night hours.</p>
+          </div>
+        </article>
+
+        <article class="service-card" tabindex="0" aria-labelledby="service6-title">
+          <img src="s6.jpg" alt="Garden consultation and planning session" loading="lazy" />
+          <div class="service-content">
+            <h3 id="service6-title">Garden Consultation & Planning</h3>
+            <p>One-on-one expert consultations to understand your needs, site analysis, and detailed garden planning for do-it-yourself gardeners or landscapers.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing" role="region" aria-labelledby="pricing-title">
+      <h2 id="pricing-title">Service Pricing</h2>
+      <div class="pricing-grid" role="list">
+        <article class="pricing-card" role="listitem" tabindex="0" aria-labelledby="price1-title">
+          <div class="pricing-title" id="price1-title">Woodland Garden Design</div>
+          <div class="pricing-price">$1,200 - $3,500</div>
+          <div class="pricing-description">Includes consultation, plant selections, and custom layout plan.</div>
+        </article>
+
+        <article class="pricing-card" role="listitem" tabindex="0" aria-labelledby="price2-title">
+          <div class="pricing-title" id="price2-title">Terrace and Patio Garden</div>
+          <div class="pricing-price">$900 - $2,200</div>
+          <div class="pricing-description">Design and material suggestions for functional outdoor living.</div>
+        </article>
+
+        <article class="pricing-card" role="listitem" tabindex="0" aria-labelledby="price3-title">
+          <div class="pricing-title" id="price3-title">Flower Garden & Seasonal Planting</div>
+          <div class="pricing-price">$600 - $1,300</div>
+          <div class="pricing-description">Includes seasonal planting plans and flower selection.</div>
+        </article>
+
+        <article class="pricing-card" role="listitem" tabindex="0" aria-labelledby="price4-title">
+          <div class="pricing-title" id="price4-title">Sustainable & Eco Garden Planning</div>
+          <div class="pricing-price">$1,500 - $4,000</div>
+          <div class="pricing-description">Eco-friendly systems design and native plant recommendations.</div>
+        </article>
+
+        <article class="pricing-card" role="listitem" tabindex="0" aria-labelledby="price5-title">
+          <div class="pricing-title" id="price5-title">Custom Garden Lighting</div>
+          <div class="pricing-price">$400 - $1,000</div>
+          <div class="pricing-description">Lighting design plan and installation guidance.</div>
+        </article>
+
+        <article class="pricing-card" role="listitem" tabindex="0" aria-labelledby="price6-title">
+          <div class="pricing-title" id="price6-title">Garden Consultation & Planning</div>
+          <div class="pricing-price">$200 per session</div>
+          <div class="pricing-description">Personalized support to get your garden project underway.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="customer-satisfaction" role="region" aria-labelledby="satisfaction-title">
+      <h2 id="satisfaction-title">Customer Satisfaction Commitment</h2>
+      <p>At Yeno Garden Designs, your satisfaction is our highest priority. We believe that a great garden reflects the personality and lifestyle of its owner, so we work closely with you at every stage to ensure every detail is perfect.</p>
+      <p>We offer full revisions during the design process, clear communication, and ongoing support post-completion. Our goal is to not just meet but exceed your expectations, transforming your outdoor space into a peaceful haven you’ll love.</p>
+      <div class="testimonials" aria-label="Customer Testimonials">
+        <blockquote class="testimonial-card" tabindex="0">
+          "Yeno Garden Designs turned my backyard into a magical forest retreat. Their attention to detail and passion for nature truly show in their work." 
+          <div class="testimonial-author">– Samantha L.</div>
+        </blockquote>
+        <blockquote class="testimonial-card" tabindex="0">
+          "Professional, creative, and dedicated. They came up with ideas I hadn’t imagined and made everything happen smoothly." 
+          <div class="testimonial-author">– Jason T.</div>
+        </blockquote>
+        <blockquote class="testimonial-card" tabindex="0">
+          "The sustainable design approach they took was exactly what I wanted – beautiful and eco-friendly." 
+          <div class="testimonial-author">– Maria R.</div>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="disclaimer" role="note" aria-label="Disclaimer">
+      <p>Disclaimer: While Yeno Garden Designs strives to create sustainable and thriving garden environments, natural growth and maintenance may vary based on weather, soil conditions, and seasonal changes. All designs are subject to local regulations and property limitations. Prices listed are estimates and may vary depending on project scope and location.</p>
+    </section>
+
+    <section id="contact" class="container" role="region" aria-labelledby="contact-title" style="padding-bottom:6rem;">
+      <h2 id="contact-title">Contact Us</h2>
+      <p>Ready to start your garden transformation or have questions about our services? Reach out to us! We’re here to provide professional advice and tailor a design plan just for you.</p>
+      <address style="font-style: normal; color: var(--forest-dark-green); max-width: 600px;">
+        40 E 7th St, New York, NY 10003, USA<br />
+        Phone: <a href="tel:+18003436667">(800) 343-6667</a><br />
+        Email: <a href="mailto:info@yenogardendesigns.com">info@yenogardendesigns.com</a>
+      </address>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>Yeno Garden Designs &copy; 2024 &mdash; 40 E 7th St, New York, NY 10003, USA | Phone: (800) 343-6667</p>
+  </footer>
+</body>
+</html>
+

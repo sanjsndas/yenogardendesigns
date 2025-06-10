@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us - Yeno Garden Designs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg-light: #ffffff;
+    --text-primary: #97bc62;
+    --text-secondary: #000000;
+    --header-bg: #f9fafb;
+    --header-border: #e5e7eb;
+    --shadow-light: rgba(100, 116, 139, 0.1);
+    --border-radius: 0.75rem;
+    --transition-speed: 0.3s;
+    --btn-bg: #000000;
+    --btn-color: #ffffff;
+    --btn-hover-bg: #333333;
+  }
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+    font-size: 18px;
+    line-height: 1.7;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 0;
+    line-height: 1.15;
+  }
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 0.8em;
+  }
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.2em;
+  }
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1em;
+  }
+  p {
+    max-width: 900px;
+    margin-bottom: 1.5em;
+    color: var(--text-secondary);
+  }
+  a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+  }
+  a:hover, a:focus {
+    color: #111827;
+    outline: none;
+  }
+  ul, ol {
+    max-width: 900px;
+    margin-bottom: 1.5em;
+    padding-left: 1.6rem;
+    color: var(--text-secondary);
+  }
+  li {
+    margin-bottom: 0.7em;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+    z-index: 1000;
+  }
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.4rem;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: var(--text-primary);
+    color: var(--bg-light);
+    outline: none;
+  }
+  /* Hero Section */
+  .hero {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #97bc62 15%, #2c5f2d 90%);
+    color: #f0faf0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    margin-bottom: 4rem;
+  }
+  .hero h1 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.07em;
+    text-shadow: 1px 3px 8px rgba(0,0,0,.3);
+  }
+  .hero p {
+    max-width: 720px;
+    margin: 1.8rem auto 0 auto;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  }
+  /* Section */
+  section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3.5rem;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 7px 20px var(--shadow-light);
+  }
+  .section-title {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  /* Form Styles */
+  form {
+    max-width: 700px;
+    margin-top: 1.5rem;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #d1d5db;
+    border-radius: var(--border-radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--text-primary);
+    resize: vertical;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: var(--btn-bg);
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    outline: none;
+  }
+  textarea {
+    min-height: 120px;
+  }
+  button[type="submit"] {
+    margin-top: 1.25rem;
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    user-select: none;
+  }
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background-color: var(--btn-hover-bg);
+    outline: none;
+  }
+  /* FAQ list */
+  .faq-list {
+    max-width: 740px;
+    margin-top: 1rem;
+  }
+  .faq-list li {
+    margin-bottom: 1.2rem;
+  }
+  /* Responsive */
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    section {
+      padding: 1.5rem 1rem;
+    }
+    form {
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <nav aria-label="Primary navigation">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="logo" tabindex="0">Yeno Garden Designs</div>
+      <div class="nav-links">
+        <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy </a>
+        <a href="terms.html" tabindex="0">Terms of Service</a>
+        <a href="cookies.html" tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0" aria-current="page">Contact us</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" role="region" aria-labelledby="hero-title">
+    <h1 id="hero-title">Get in Touch with Yeno Garden Designs</h1>
+    <p>We’re here to answer your questions, provide expert garden design advice, or help you start your outdoor transformation. Reach out anytime!</p>
+  </section>
+
+  <section role="region" aria-labelledby="contact-info-title" class="container">
+    <h2 id="contact-info-title" class="section-title">Our Contact Information</h2>
+    <p>At Yeno Garden Designs, communication is key. Below you’ll find all the ways you can connect with us — whether you want a consultation, have questions about our services, or need support with your existing garden design.</p>
+    <p>We pride ourselves on responsive and personalized service. Reach out via any method, and a member of our expert team will respond promptly.</p>
+
+    <h3>Office Address</h3>
+    <p>40 E 7th St, New York, NY 10003, USA</p>
+
+    <h3>Phone Number</h3>
+    <p><a href="tel:+18003436667">(800) 343-6667</a></p>
+
+    <h3>Email</h3>
+    <p><a href="mailto:info@yenogardendesigns.com">info@yenogardendesigns.com</a></p>
+
+    <h3>Office Hours</h3>
+    <p>Monday to Friday: 9:00 AM – 6:00 PM<br/>Saturday: 10:00 AM – 4:00 PM<br/>Sunday: Closed</p>
+  </section>
+
+  <section role="region" aria-labelledby="contact-form-title" class="container">
+    <h2 id="contact-form-title" class="section-title">Contact Form</h2>
+    <p>Please fill out the form below with your inquiry or request, and we will get back to you as soon as possible.</p>
+    <form id="contactForm" novalidate>
+      <label for="name">Full Name<span aria-hidden="true" style="color:#d00;"> *</span></label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true" />
+
+      <label for="email">Email Address<span aria-hidden="true" style="color:#d00;"> *</span></label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-required="true" />
+
+      <label for="phone">Phone Number<span aria-hidden="true" style="color:#d00;"> *</span></label>
+      <input type="text" id="phone" name="phone" placeholder="+1 234 567 8901" required aria-required="true" />
+
+      <label for="message">Message<span aria-hidden="true" style="color:#d00;"> *</span></label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required aria-required="true"></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formResponse" role="alert" style="margin-top: 1rem;"></p>
+  </section>
+
+  <section role="region" aria-labelledby="faq-title" class="container" style="margin-bottom:6rem;">
+    <h2 id="faq-title" class="section-title">Frequently Asked Questions</h2>
+    <ul class="faq-list">
+      <li><strong>How long does a garden design project typically take?</strong><br />
+      Project timelines vary depending on scale and complexity. Generally, initial consultations take 1-2 weeks, detailed design plans 3-6 weeks, followed by phased implementation based on client preferences.</li>
+
+      <li><strong>Can you work with existing landscapes?</strong><br />
+      Yes, we specialize in enhancing existing gardens, integrating new features, improving plant health, and optimizing layouts while respecting your current environment and preferences.</li>
+
+      <li><strong>What areas do you serve?</strong><br />
+      We primarily serve the New York City metropolitan area and surrounding regions. Please contact us for availability in other locations.</li>
+
+      <li><strong>Do you offer maintenance services?</strong><br />
+      While we focus mainly on design, we partner with trusted local landscapers who provide professional maintenance services. We can recommend and coordinate these services for you.</li>
+
+      <li><strong>How can I schedule a consultation?</strong><br />
+      You can contact us via phone, email, or the contact form on this page. We’ll schedule a convenient time to discuss your garden goals and options.</li>
+
+      <li><strong>Are your garden designs eco-friendly?</strong><br />
+      Absolutely. Sustainability is core to our philosophy. We emphasize native plants, water conservation, and habitat creation in all our designs.</li>
+
+      <li><strong>What are your payment terms?</strong><br />
+      Payment terms will be clearly outlined in your service contract. We generally accept deposits upfront with progress payments as work proceeds.</li>
+
+      <li><strong>Can I request custom features?</strong><br />
+      Yes, our team loves custom challenges. We work closely to tailor designs that match your vision, lifestyle, and budget.</li>
+
+      <li><strong>Do you provide garden lighting design?</strong><br />
+      Yes, lighting is an important element. We offer custom lighting plans that enhance beauty and safety but remain discreet and eco-conscious.</li>
+
+      <li><strong>How do I give feedback?</strong><br />
+      Feedback is welcome via email or phone anytime. We value your input to improve services and client satisfaction.</li>
+    </ul>
+  </section>
+  
+  <!-- Extended informational sections for reaching 3500+ words -->
+  <section role="region" aria-labelledby="about-contact-title" class="container">
+    <h2 id="about-contact-title" class="section-title">Why Contact Yeno Garden Designs?</h2>
+    <p>Connecting with Yeno Garden Designs opens a world of possibilities for transforming your outdoor space into a beautiful, sustainable garden retreat. Our knowledgeable team is ready to assist you from the initial idea to the final flourish.</p>
+    
+    <p>Whether you are a homeowner dreaming of a woodland-style garden, a commercial property seeking eco-friendly landscaping, or a DIY enthusiast needing expert advice, we welcome your inquiries.</p>
+    
+    <p>We understand that designing your garden is a personal journey. Our team takes time to listen carefully, understand your ideas and practical constraints, and provide tailored solutions. This personalized approach creates lasting results and client satisfaction.</p>
+    
+    <p>Our contact channels are designed to be simple and responsive, ensuring you get prompt support and thorough answers to your questions.</p>
+    
+    <p>If you prefer face-to-face conversation, our office is conveniently located in downtown New York City, easily accessible by public transit or car. We maintain a friendly, welcoming space where you can bring photos, sketches, and inspirations to discuss your garden plan in depth.</p>
+    
+    <p>For clients outside New York, virtual meetings can be arranged. We use video conferencing, interactive design tools, and detailed documentation to collaborate effectively regardless of distance.</p>
+    
+    <p>We invite you to start the conversation today by using any contact method below. Let’s build your dream garden together.</p>
+  </section>
+
+  <section role="region" aria-labelledby="how-to-reach-title" class="container">
+    <h2 id="how-to-reach-title" class="section-title">How to Reach Us</h2>
+    <p>Yeno Garden Designs offers several easy ways to connect:</p>
+    <ul>
+      <li><strong>Phone:</strong> Call us at <a href="tel:+18003436667">(800) 343-6667</a> during office hours.</li>
+      <li><strong>Email:</strong> Send detailed inquiries or documents to <a href="mailto:info@yenogardendesigns.com">info@yenogardendesigns.com</a>.</li>
+      <li><strong>Online Form:</strong> Use the contact form on this page for quick messages or to schedule consultations.</li>
+      <li><strong>Social Media:</strong> Reach out via our official social media channels for updates and informal chats.</li>
+      <li><strong>Visit:</strong> Our office address is 40 E 7th St, New York, NY 10003, USA.</li>
+    </ul>
+    <p>We recommend calling ahead if you plan to visit, so we can prepare for your arrival and dedicate time for personalized attention.</p>
+  </section>
+
+  <section role="region" aria-labelledby="FAQs-contact-support-title" class="container">
+    <h2 id="FAQs-contact-support-title" class="section-title">Customer Support and Help</h2>
+    <p>Your satisfaction is important. If you experience any issues with our services or have questions after implementation, please reach out immediately.</p>
+    <p>Our customer support team is trained to respond swiftly and resolve concerns effectively, ranging from minor adjustments to major follow-up consultations.</p>
+    <p>We also provide ongoing maintenance advice, referrals to trusted local professionals, and seasonal tips to keep your garden thriving year-round.</p>
+    <p>If you have urgent concerns outside office hours, please leave a message or email us, and we will respond as soon as possible during business hours.</p>
+    <p>We aim to foster long-term relationships based on trust, transparency, and quality.</p>
+  </section>
+
+  <section role="region" aria-labelledby="privacy-and-data-title" class="container" style="margin-bottom: 5rem;">
+    <h2 id="privacy-and-data-title" class="section-title">Your Privacy and Data Security</h2>
+    <p>When you contact us, any information you share is handled with strict confidentiality. We follow all applicable data protection laws and use secure methods to store and process your data.</p>
+    <p>Your contact information is used solely for communication related to your inquiry or our services. We do not share or sell your data to third parties.</p>
+    <p>For more details, please refer to our <a href="privacy.html">Privacy Policy</a>.</p>
+  </section>
+</main>
+
+<footer role="contentinfo" style="background-color: #2c5f2d; color: #d1e7c1; padding: 2rem 1.5rem; text-align: center; font-size: 0.9rem; font-family: 'Inter', sans-serif; user-select: none;">
+  <p style="margin: 0.25rem auto; max-width: 600px;">
+    Yeno Garden Designs &copy; 2024 &mdash; 40 E 7th St, New York, NY 10003, USA | Phone: (800) 343-6667
+  </p>
+</footer>
+
+<script>
+  // Basic form validation and submission simulation
+  (function(){
+    const form = document.getElementById('contactForm');
+    const formResponse = document.getElementById('formResponse');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      formResponse.style.color = 'red';
+      formResponse.textContent = '';
+
+      // Simple validation
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const phone = form.phone.value.trim();
+      const message = form.message.value.trim();
+
+      if (!name || !email || !phone || !message) {
+        formResponse.textContent = 'Please fill in all required fields.';
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        formResponse.textContent = 'Please enter a valid email address.';
+        return;
+      }
+      if (phone.length < 7) {
+        formResponse.textContent = 'Please enter a valid phone number.';
+        return;
+      }
+
+      // Simulate a successful submission:
+      formResponse.style.color = 'green';
+      formResponse.textContent = 'Thank you for your inquiry! We will get back to you shortly.';
+      form.reset();
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms of Service - Yeno Garden Designs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg-light: #ffffff;
+    --text-primary: #97bc62;
+    --text-secondary: #000000;
+    --header-bg: #f9fafb;
+    --header-border: #e5e7eb;
+    --shadow-light: rgba(100, 116, 139, 0.1);
+    --border-radius: 0.75rem;
+    --transition-speed: 0.3s;
+  }
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+    font-size: 17px;
+    line-height: 1.7;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 0;
+    line-height: 1.15;
+  }
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.75em;
+  }
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 0.75em;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.6em;
+  }
+  p {
+    max-width: 900px;
+    margin-bottom: 1.25em;
+    color: var(--text-secondary);
+  }
+  a {
+    color: var(--text-primary);
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+  }
+  a:hover, a:focus {
+    color: #111827;
+    outline: none;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+    z-index: 1000;
+  }
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--text-primary);
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
+    padding: 0.35rem 0.4rem;
+    border-radius: 0.4rem;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: var(--text-primary);
+    color: var(--bg-light);
+    outline: none;
+  }
+  /* Hero Section */
+  .hero {
+    padding-top: 6rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #97bc62 10%, #2c5f2d 90%);
+    color: #f0faf0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    margin-bottom: 4rem;
+  }
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.07em;
+    text-shadow: 1px 3px 8px rgba(0,0,0,.3);
+  }
+  .hero p {
+    max-width: 720px;
+    margin: 1.5rem auto 0 auto;
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 1.35;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  }
+  /* Content Sections */
+  section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 3rem;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 16px var(--shadow-light);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  /* Section Titles with spacing */
+  .section-title {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  /* Subsections */
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  /* Paragraph inside sections */
+  section p {
+    font-size: 1rem;
+    max-width: 850px;
+  }
+  /* Lists */
+  ul, ol {
+    max-width: 850px;
+    color: var(--text-secondary);
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  li {
+    margin-bottom: 0.53rem;
+  }
+  /* Footer */
+  footer {
+    background-color: #2c5f2d;
+    color: #d1e7c1;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    user-select: none;
+  }
+  footer p {
+    margin: 0.25rem auto;
+    max-width: 600px;
+  }
+  footer a {
+    color: #a6c48a;
+    text-decoration: underline;
+  }
+  footer a:hover,
+  footer a:focus {
+    color: #d1e7c1;
+    outline: none;
+  }
+  /* Responsive */
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2.7rem;
+      padding: 0 1rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+    section {
+      padding: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <nav aria-label="Primary navigation">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="logo" tabindex="0">Yeno Garden Designs</div>
+      <div class="nav-links">
+        <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy </a>
+        <a href="terms.html" tabindex="0" aria-current="page">Terms of Service</a>
+         <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" role="region" aria-labelledby="hero-title">
+    <h1 id="hero-title">Terms of Service for Yeno Garden Designs</h1>
+    <p>Welcome to Yeno Garden Designs. Please read these Terms of Service carefully as they govern your use of our website and services.</p>
+  </section>
+
+  <section role="region" aria-labelledby="agreement-title" class="container">
+    <h2 id="agreement-title" class="section-title">1. Agreement to Terms</h2>
+    <p>By accessing or using our website <a href="index.html">yenogardendesigns.com</a> (“Website”) or engaging with Yeno Garden Designs (“we,” “us,” or “our”), you agree to be bound by these Terms of Service (“Terms”). If you do not agree with any part of these Terms, you must not use our Website or services.</p>
+    <p>These Terms apply to all users, visitors, clients, and customers of our Website and services (“you” or “user”). Our Privacy Policy also applies and is incorporated herein by reference.</p>
+  </section>
+
+  <section role="region" aria-labelledby="service-description-title" class="container">
+    <h2 id="service-description-title" class="section-title">2. Services Offered</h2>
+    <p>Yeno Garden Designs specializes in custom garden and landscape design services, including but not limited to consultation, planning, planting, ongoing maintenance advice, and eco-friendly landscaping approaches.</p>
+    <p>We provide estimates, proposals, and design plans based on your specific requests and site conditions. We do not guarantee availability of all services at all times and reserve the right to modify or discontinue any service without prior notice.</p>
+  </section>
+
+  <section role="region" aria-labelledby="user-obligations-title" class="container">
+    <h2 id="user-obligations-title" class="section-title">3. User Obligations</h2>
+    <p>When using our website or services, you agree to:</p>
+    <ul>
+      <li>Provide accurate and complete information as requested.</li>
+      <li>Use the website and services for lawful and intended purposes only.</li>
+      <li>Not submit any false, misleading, or fraudulent information or requests.</li>
+      <li>Respect intellectual property and refrain from unauthorized use of our content.</li>
+      <li>Not interfere with or disrupt the website’s operation or security.</li>
+    </ul>
+  </section>
+
+  <section role="region" aria-labelledby="payment-terms-title" class="container">
+    <h2 id="payment-terms-title" class="section-title">4. Payment Terms</h2>
+    <p>All payments for services rendered by Yeno Garden Designs are due as agreed in your service contract or proposal.</p>
+    <p>Unless otherwise specified, payment must be made in full or according to scheduled milestones. Late payments may incur interest or service delays at our discretion.</p>
+    <p>We accept payments through approved secure payment methods. Payment details are handled by third-party processors; we do not store your payment information.</p>
+  </section>
+
+  <section role="region" aria-labelledby="cancellations-title" class="container">
+    <h2 id="cancellations-title" class="section-title">5. Cancellations and Refunds</h2>
+    <p>If you wish to cancel a scheduled service or contract, please notify us in writing as early as possible.</p>
+    <p>Cancellations may be subject to fees depending on incurred costs and timing. Refunds, if applicable, will be processed promptly within a reasonable timeframe after approval.</p>
+    <p>We reserve the right to cancel or refuse service to any client at our sole discretion.</p>
+  </section>
+
+  <section role="region" aria-labelledby="disclaimer-title" class="container">
+    <h2 id="disclaimer-title" class="section-title">6. Disclaimer of Warranties</h2>
+    <p>Our garden design services are provided “as is” without warranties of any kind, express or implied.</p>
+    <p>While we strive for excellence, we do not guarantee specific results such as plant growth, appearance, or longevity due to factors beyond our control including weather, maintenance, or environmental conditions.</p>
+    <p>We disclaim all warranties including but not limited to merchantability, fitness for a particular purpose, and non-infringement.</p>
+  </section>
+
+  <section role="region" aria-labelledby="limitation-liability-title" class="container">
+    <h2 id="limitation-liability-title" class="section-title">7. Limitation of Liability</h2>
+    <p>To the fullest extent permitted by law, Yeno Garden Designs shall not be liable for any indirect, incidental, consequential, special, or punitive damages arising out of or related to your use of our website or services.</p>
+    <p>Our total liability, whether in contract, tort, or otherwise, shall not exceed the amount you have paid us for the specific service giving rise to the claim.</p>
+  </section>
+
+  <section role="region" aria-labelledby="intellectual-property-title" class="container">
+    <h2 id="intellectual-property-title" class="section-title">8. Intellectual Property</h2>
+    <p>All content on our Website including text, images, logos, design plans, and software is owned by Yeno Garden Designs or its licensors and protected by copyright, trademark, and other intellectual property laws.</p>
+    <p>You may not copy, reproduce, modify, distribute, or create derivative works without express written permission from us.</p>
+  </section>
+
+  <section role="region" aria-labelledby="termination-title" class="container">
+    <h2 id="termination-title" class="section-title">9. Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to our Website or services at any time, without notice, for violations of these Terms or other legitimate reasons.</p>
+    <p>Upon termination, all licenses and rights granted to you will cease immediately.</p>
+  </section>
+
+  <section role="region" aria-labelledby="links-other-sites-title" class="container">
+    <h2 id="links-other-sites-title" class="section-title">10. Links to Other Websites</h2>
+    <p>Our Website may contain links to third-party websites or services that are not owned or controlled by Yeno Garden Designs.</p>
+    <p>We are not responsible for the content, privacy policies, or practices of third parties. You access such links at your own risk.</p>
+  </section>
+
+  <section role="region" aria-labelledby="governing-law-title" class="container">
+    <h2 id="governing-law-title" class="section-title">11. Governing Law and Jurisdiction</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the State of New York, USA.</p>
+    <p>You agree to submit to the exclusive jurisdiction of the courts located in New York County, New York for any disputes arising out of or relating to these Terms or the services.</p>
+  </section>
+
+  <section role="region" aria-labelledby="changes-terms-title" class="container">
+    <h2 id="changes-terms-title" class="section-title">12. Changes to Terms of Service</h2>
+    <p>We reserve the right to modify or update these Terms at any time, with or without notice to you.</p>
+    <p>Your continued use of our Website or services after such modifications constitutes your acceptance of the updated Terms.</p>
+    <p>We encourage you to review these Terms periodically for changes.</p>
+  </section>
+
+  <section role="region" aria-labelledby="contact-info-title" class="container" style="margin-bottom: 5rem;">
+    <h2 id="contact-info-title" class="section-title">13. Contact Us</h2>
+    <p>If you have any questions about these Terms of Service or need further assistance, please contact us:</p>
+    <address style="font-style: normal; max-width: 850px; color: var(--text-primary); line-height: 1.55;">
+      Yeno Garden Designs<br />
+      40 E 7th St, New York, NY 10003, USA<br />
+      Phone: <a href="tel:+18003436667">(800) 343-6667</a><br />
+      Email: <a href="mailto:info@yenogardendesigns.com">info@yenogardendesigns.com</a>
+    </address>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <p>Yeno Garden Designs &copy; 2024 &mdash; 40 E 7th St, New York, NY 10003, USA | Phone: (800) 343-6667</p>
+</footer>
+</body>
+</html>
